@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.elianxi_dengluzhuce"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+//    gson
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+//    Retrofit的依赖
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+
+//    rxjava1依赖
+    compile 'io.reactivex:rxjava:1.0.14'
+//    rxandroid依赖
+    compile 'io.reactivex:rxandroid:1.0.1'
+//    rxjava adapter依赖
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+//    黄油刀
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+//    XRecyclerView 依赖：
+    compile 'com.jcodecraeer:xrecyclerview:1.5.9'
+    //    fresco依赖
+    compile 'com.facebook.fresco:fresco:0.11.0'
+
+}
